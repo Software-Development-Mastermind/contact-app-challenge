@@ -19,14 +19,40 @@ class App extends Component {
         notes: "None!"
       },
     ],
+    form: {
+      firstName: "",
+      lastName: "",
+      phone: "",
+      email: "",
+      addressLine1: "",
+      addressLine2: "",
+      city: "",
+      state: "",
+      country: "",
+      notes: ""
+    }
   };
+  
+  updateName = (value) => {
+    // creates a "deep clone" aka copy of this.state.form object
+    const formCopy = Object.assign({}, this.state.form);
+
+    // updates the name property of the "deep clone"
+    formCopy.name = value;
+
+    // updates this.state.form to be the "deep clone"
+    this.setState({
+      form: formCopy
+    })
+  }
 
   render() {
+    console.log(this.state.form.name);
     return (
       <div className="container">
         <h1 className="my-4">Contact Tracker!</h1>
         <div>
-          <NewContactForm />
+          <NewContactForm form={this.state.form} changeName={this.updateName} />
         </div>
         <div>
           <ContactsTable contacts={this.state.contacts} />

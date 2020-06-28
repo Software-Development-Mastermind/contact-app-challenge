@@ -6,7 +6,7 @@ class ContactsTable extends Component {
 
     for (let i = 0; i < this.props.contacts.length; i++) {
       const row = (
-        <tr>
+        <tr key={i}>
           <td>
             {this.props.contacts[i].firstName +
               " " +
