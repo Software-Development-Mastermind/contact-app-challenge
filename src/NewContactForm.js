@@ -12,7 +12,7 @@ class NewContactForm extends Component {
           <div className="col-sm">
             <div className="form-group">
               <label htmlFor="first-name">First Name</label>
-              <input id="first-name" name="firstName" type="text" className="form-control" onChange={(e) => this.props.changeName(e.target.value)} />
+              <input id="first-name" name="firstName" type="text" className="form-control" />
             </div>
           </div>
           <div className="col-sm">

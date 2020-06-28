@@ -47,12 +47,13 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.state.form.name);
+    // do not remove this!
+    console.log('current value of name <input>: ', this.state.form.name);
     return (
       <div className="container">
         <h1 className="my-4">Contact Tracker!</h1>
         <div>
-          <NewContactForm form={this.state.form} changeName={this.updateName} />
+          <NewContactForm />
         </div>
         <div>
           <ContactsTable contacts={this.state.contacts} />
