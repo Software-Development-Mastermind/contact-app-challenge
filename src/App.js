@@ -38,7 +38,7 @@ class App extends Component {
     const formCopy = Object.assign({}, this.state.form);
 
     // updates the name property of the "deep clone"
-    formCopy.name = value;
+    formCopy.firstName = value;
 
     // updates this.state.form to be the "deep clone"
     this.setState({
@@ -48,7 +48,7 @@ class App extends Component {
 
   render() {
     // do not remove this!
-    console.log('current value of name <input>: ', this.state.form.name);
+    console.log('current value of name <input>: ', this.state.form.firstName);
     return (
       <div className="container">
         <h1 className="my-4">Contact Tracker!</h1>
